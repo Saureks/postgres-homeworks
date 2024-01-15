@@ -14,7 +14,7 @@ if __name__ == "__main__":
     psw = os.getenv('postgres_psw')
     user = os.getenv('us_postgres')
 
-    conn = psycopg2.connect(host='localhost', database='north', user=user, password=password)
+    conn = psycopg2.connect(host='localhost', database='north', user='postgres', password='1999')
     cursor = conn.cursor()
     try:
         for table, csv_file in csv_files.items():
