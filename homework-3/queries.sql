@@ -28,7 +28,6 @@ SELECT DISTINCT company_name
 FROM customers
 WHERE NOT EXISTS (SELECT 1 from orders WHERE orders.customer_id = customers.customer_id)
 
-
 -- 4. уникальные названия продуктов, которых заказано ровно 10 единиц (количество заказанных единиц см в колонке quantity табл order_details)
 -- Этот запрос написать именно с использованием подзапроса.
 SELECT product_name
